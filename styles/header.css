@@ -1,0 +1,20 @@
+header {
+    grid-area: header;
+}
+
+.header {
+    background-color: rgb(242, 141, 141);
+    border-radius: 15px;
+    padding: 10px;
+    margin: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+@media (min-width: 901px) {
+    .header {
+        font-size: 18px;
+        padding: 20px;
+        width: 95%;
+    }
+}

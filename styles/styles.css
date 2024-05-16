@@ -1,0 +1,188 @@
+@import url("nav.css");
+@import url("header.css");
+@import url("footer.css");
+body {
+    background-color: rgb(166, 166, 166);
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+.main-container {
+    height: auto;
+    width: 90%;
+    margin-top: 10px;
+    display: grid;
+    background-color: #66ffff;
+    border: 2px solid black;
+    grid-template-areas: "header" "nav" "main" "footer";
+    grid-template-rows: 100px 110px auto 1fr;
+    gap: 50px
+}
+
+main {
+    grid-area: main;
+}
+
+.name {
+    background-color: lightsalmon;
+    border: 3px solid lightgreen;
+    border-radius: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    height: 80px;
+    width: 350px;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+blockquote {
+    font-style: italic;
+    font-size: 22px;
+    color: darkred;
+}
+
+.main-content {
+    display: grid;
+    grid-template-areas: "my-profile" "introduction" "main" "facts";
+    grid-template-columns: 200px 200px auto;
+    grid-template-rows: 150px 200px 1fr;
+    gap: 5px;
+}
+
+.myprofile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.introduction {
+    background-color: rgb(224, 133, 163);
+    border: 3px solid lightslategray;
+    font-family: 25px Georgia, "Times New Roman", Times, serif;
+    text-align: center;
+    width: 50%;
+    height: 250px;
+    margin: 25px 35px 20px 60px;
+    display: flex;
+    float: left;
+    box-shadow: 8px 8px 10px black;
+}
+
+img {
+    background-image: url("../images/Sejal headshot.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    border: 2px solid lightcoral;
+    display: flex;
+    float: right;
+}
+
+#allfacts {
+    background-color: palegreen;
+    border: 3px solid lightslategray;
+    height: 300px;
+    width: 500px;
+    padding: 25px;
+    margin-right: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    float: right;
+    box-shadow: 10px 10px 10px slategray;
+}
+
+button {
+    background-color: rgb(255, 77, 77);
+    border: 2px solid black;
+    border-radius: 12px;
+    color: black;
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    float: right;
+}
+
+a {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+@media (max-width: 900px) {
+    .main-content {
+        display: flex;
+        flex-direction: column;
+    }
+    body {
+        background-color: #66ffff;
+    }
+    .main-container {
+        border: none;
+        width: 85%;
+        gap: 100px;
+    }
+    .introduction {
+        width: 70%;
+    }
+    #allfacts {
+        width: 70%;
+        height: 200px;
+        text-align: left;
+        margin-left: 50px;
+        margin-bottom: 10px;
+        float: left;
+    }
+    /*button {
+        font-size: 12px;
+        text-align: center;
+        padding: 5px;
+        padding-bottom: 5px;
+    }*/
+}
+
+@media (min-width: 901px) {
+    body {
+        background-color: rgb(166, 166, 166);
+    }
+    .main-container {
+        background-color: rgb(166, 166, 166);
+        border: none;
+        width: 90%;
+        height: auto;
+        gap: 100px;
+    }
+    .name {
+        width: 100%;
+    }
+    .introduction {
+        width: 80%;
+        font-size: 22px;
+    }
+    #allfacts {
+        width: 80%;
+        height: 200px;
+        text-align: left;
+        margin-left: 50px;
+        margin-bottom: 10px;
+        float: left;
+    }
+    button {
+        font-size: 12px;
+        text-align: center;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+    }
+    /*footer {
+        width: 97%;
+    }*/
+}
+
+@media (max-width:828px) {
+    nav button {
+        display: none;
+    }
+}

@@ -1,0 +1,44 @@
+nav {
+    grid-area: nav;
+    background-color: #8ac7db;
+    border-radius: 10px;
+    padding: 10px 0;
+    margin: 20px;
+    display: flex;
+    float: left;
+}
+
+nav a {
+    color: #831fe0;
+    text-align: center;
+    border-radius: 8px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.navlinks {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+    nav {
+        flex-wrap: wrap;
+    }
+    nav button {
+        display: block;
+    }
+}
+
+@media (min-width: 901px) {
+    nav {
+        width: 95%;
+        margin-top: 20px;
+        justify-content: space-around;
+    }
+    .navlinks li {
+        margin: 0;
+        font-size: 15px;
+    }
+}
